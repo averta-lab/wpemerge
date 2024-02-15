@@ -9,7 +9,7 @@
 
 namespace WPEmerge\Requests;
 
-use GuzzleHttp\Psr7\ServerRequest;
+use Psr\Http\Message\ServerRequestInterface;
 use WPEmerge\Support\Arr;
 
 /**
@@ -20,9 +20,9 @@ class Request extends ServerRequest implements RequestInterface {
 	 * @codeCoverageIgnore
 	 * {@inheritDoc}
 	 *
-	 * @return RequestInterface
+	 * @return ServerRequestInterface
 	 */
-	public static function fromGlobals(): RequestInterface {
+	public static function fromGlobals(): ServerRequestInterface {
 		$request = parent::fromGlobals();
 		$new = new self(
 			$request->getMethod(),
