@@ -19,9 +19,10 @@ class Request extends ServerRequest implements RequestInterface {
 	/**
 	 * @codeCoverageIgnore
 	 * {@inheritDoc}
-	 * @return static
+	 *
+	 * @return RequestInterface
 	 */
-	public static function fromGlobals() {
+	public static function fromGlobals(): RequestInterface {
 		$request = parent::fromGlobals();
 		$new = new self(
 			$request->getMethod(),
@@ -72,9 +73,9 @@ class Request extends ServerRequest implements RequestInterface {
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * return string
 	 */
-	public function getMethod() {
+	public function getMethod(): string {
 		$method = parent::getMethod();
 
 		if ( $method === 'POST' ) {
