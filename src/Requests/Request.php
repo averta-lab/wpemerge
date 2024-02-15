@@ -9,6 +9,7 @@
 
 namespace WPEmerge\Requests;
 
+use GuzzleHttp\Psr7\ServerRequest;
 use Psr\Http\Message\ServerRequestInterface;
 use WPEmerge\Support\Arr;
 
