@@ -30,7 +30,7 @@
     "email": "wordpress@htmlburger.com"
   },
   "require": {
-    "php": ">=7.2",
+    "php": ">=7.2.5",
     "pimple/pimple": "^3.5",
     "guzzlehttp/psr7": "^2.6",
     "psr/container": "^2.0.1"
